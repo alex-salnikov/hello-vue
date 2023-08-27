@@ -1,9 +1,9 @@
 # Vue.js
 Examples
-- [index.html](./index.html)
-- [index1.html](./index1.html)
-- [index2.html](./index2.html)
-- [table.html](./table.html)
+- [index.html](./index.html) / [demo](https://alex-salnikov.github.io/hello-vue/index.html)
+- [index1.html](./index1.html) / [demo](https://alex-salnikov.github.io/hello-vue/index1.html)
+- [index2.html](./index2.html) / [demo](https://alex-salnikov.github.io/hello-vue/index2.html)
+- [table.html](./table.html) / [demo](https://alex-salnikov.github.io/hello-vue/table.html)
 
 
 # References
