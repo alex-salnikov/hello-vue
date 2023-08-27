@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+https://github.com/kafkadev/vue-without-webpack/blob/master/docs/index.html
+https://stackoverflow.com/questions/48442598/can-we-make-vue-js-application-without-vue-extension-component-and-webpack
+https://github.com/ramazandogna/searchable-table/blob/master/src/components/Table.vue
+-->
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Table</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.14/vue.min.js"
+        integrity="sha512-BAMfk70VjqBkBIyo9UTRLl3TBJ3M0c6uyy2VMUrq370bWs7kchLNN9j1WiJQus9JAJVqcriIUX859JOm12LWtw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.8.1/vue-router.min.js"
+        integrity="sha512-d3bJM1F6vG3DBIYyj8fMN3h6p15Vo3nD+gBXEL4c3ttm+TjaS/F/2UfD54ZqZ6cPXt+ua/EINGng3Gm2cL1fUg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/http-vue-loader"
+        integrity="sha256-aOeVxnlZDaiJOHsqNWVOMNsKdiGxgT8kbLp1p1Rv2sc="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+	<div id="app">
+		<h1>Table</h1>
+        <router-view></router-view>
+	</div>
+	<script src="table/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+
+# Referenes
+- https://vuejs.org/guide/scaling-up/state-management.html
+- https://github.com/kafkadev/vue-without-webpack
+
+-->
+<head>
+	<!--
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.esm-browser.min.js"
+		integrity="sha512-copxJKD/NFVXucbANMyvfhxkHOvcjZP6nLxCLCOZwrkxCif/l0C65OwLm8Ca9TOCnTnzRJE4UiiU+/snx9nS3g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.cjs.min.js"
+		integrity="sha512-Nk4aRxW2zg0jN2rFYzF1Hc/xiTNTkk1LwMytaVrL7hK4Qij51+H7oNmKzDDYdUQzEEWAgBhzQ7F6bGYesDi1Bw=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/4.2.4/vue-router.cjs.js"
+		integrity="sha512-hihdghOhvUKO3Tv3BEBKYvRDPJvNWZemo1EkKMb2PmB+bNrvoX6JUntgoTMJ/3mayxtCQ6J95V41Dvv4LeET8A=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"></script>
+	-->
+	<script src="https://unpkg.com/http-vue-loader"></script>
+	<script type="importmap">
+	{
+		"imports": {
+			"vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+		}
+	}
+	</script>
+</head>
+<body>
+<div id="app"></div>
+
+<script type="module">
+// 'use strict';
+var component = httpVueLoader('./component.vue.js')
+
+import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+//import { createApp } from 'vue'
+//import MyComponent2 from './component.vue'
+createApp(component).mount('#app')
+
+</script>
+</body>

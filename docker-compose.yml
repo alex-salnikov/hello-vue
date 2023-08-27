@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  hello:
+    image: nginx
+    restart: unless-stopped
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.hello-vue.rule=Host(`hello-vue.myhost.lan`)
+    volumes:
+      - ./:/usr/share/nginx/html
+    networks:
+      - default
+
+networks:
+  default:
+    name: gateway

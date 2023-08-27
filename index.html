@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<script src="https://unpkg.com/vue@next"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader@0.8.4/dist/vue3-sfc-loader.js"></script>
+	<script>
+
+		loadFile = (url) => new Promise(function (resolve, reject) {
+			let xhr = new XMLHttpRequest();
+			xhr.onload = function () {
+				if (xhr.status != 200) {
+					reject(`Error ${xhr.status}: ${xhr.statusText}`);
+				}
+				else {
+					resolve(xhr.response);
+				}
+			};
+			xhr.open('GET', url)
+			xhr.send();
+		})
+
+		const options = {
+			moduleCache: {
+				vue: Vue,
+			},
+			getFile(url) {
+				return loadFile(url);
+			},
+			addStyle() { /* unused here */ },
+		}
+
+		const { loadModule } = window['vue3-sfc-loader'];
+		Vue.createApp(Vue.defineAsyncComponent(() => loadModule('/component.vue', options))).mount(document.body);
+
+	</script>
+</body>
+
+</html>

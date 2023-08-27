@@ -1,0 +1,5 @@
+[
+    { "id": 100, "name": "John", "contact": "123-456"},
+    { "id": 200, "name": "Alice", "contact": "456-789"},
+    { "id": 300, "name": "Bob", "contact": "789-123"}
+]
